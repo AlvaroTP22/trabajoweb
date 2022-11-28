@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$nombre = "Alvaro";
+
+echo "Hola mi nombre es $nombre";
+?>
+
+</body>
+</html>
