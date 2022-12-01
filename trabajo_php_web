@@ -1,3 +1,5 @@
+//ejercicio 1
+
 <!DOCTYPE html>
 <html>
 <body>
@@ -7,6 +9,39 @@ $nombre = "Alvaro";
 
 echo "Hola mi nombre es $nombre";
 ?>
+
+</body>
+</html>
+
+// ejercicio 2
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$numero1 = "5";
+$numero2 = "2";
+$resultado = $numero1 + $numero2;
+echo $resultado;
+?> 
+
+</body>
+</html>
+
+//ejercicio 3
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$variable_10 = "0";
+while ($variable_10 <= 9){
+	echo "$variable_10,";$variable_10++;
+}
+echo $variable_10;
+?> 
 
 </body>
 </html>
