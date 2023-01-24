@@ -1,0 +1,127 @@
+//ejercicio 1
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$num1 = 5;
+$num2 = 8;
+
+if ($num1 > $num2) {
+    echo "El número mayor es: " . $num1;
+} else {
+    echo "El número mayor es: " . $num2;
+}
+?>
+
+</body>
+</html>
+
+//ejercicio 2
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$calificacion = 5;
+
+switch ($calificacion) {
+	case 1:
+    case 2:
+    case 3:
+    case 4:
+    	echo "Suspenso";
+        break;
+    case 5:
+    case 6:
+        echo "Aprobado";
+        break;
+    case 7:
+    case 8:
+        echo "Notable";
+        break;
+    case 9:
+    case 10:
+        echo "Sobresaliente";
+        break;
+    default:
+        echo "Calificación no válida";
+}
+?>
+
+</body>
+</html>
+
+//ejercicio 3
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+// Declaración de los arrays
+$motos = array("Yamaha", "Honda", "Suzuki", "Kawasaki");
+$coches = array("Ford", "Ferrari", "BMW", "Audi");
+
+// Función para mostrar los elementos de un array y ordenarlos
+function mostrarResultadosOrdenados($vehiculos) {
+    sort($vehiculos);
+    echo "Vehículos ordenados: ";
+    foreach ($vehiculos as $vehiculo) {
+        echo $vehiculo . " ";
+    }
+}
+
+// a) Recorre uno de los arrays mostrando sus elementos
+echo "Motos: ";
+foreach ($motos as $moto) {
+    echo $moto . " ";
+}
+echo "<br>";
+
+// b) Ordena y muestra sus elementos
+sort($motos);
+echo "Motos ordenadas: ";
+foreach ($motos as $moto) {
+    echo $moto . " ";
+}
+echo "<br>";
+
+// c) Llamada a la función
+mostrarResultadosOrdenados($coches);
+echo "<br>";
+
+// d) Indicar cuantos elementos hay
+echo "Hay " . count($motos) . " motos y " . count($coches) . " coches.";
+echo "<br>";
+
+// e) Buscar un elemento
+$buscar = "Ferrari";
+if (in_array($buscar, $coches)) {
+    echo "El vehículo " . $buscar . " se encuentra en el array de coches.";
+} else {
+    echo "El vehículo " . $buscar . " no se encuentra en el array de coches.";
+}
+?>
+
+</body>
+</html>
+
+//ejercicio 4
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+// Formato 1: Fecha completa
+echo "Fecha completa: " . date("d-m-Y H:i:s") . "<br>";
+
+// Formato 2: Solo la hora
+echo "Solo la hora: " . date("H:i:s");
+?>
+
+</body>
+</html>
