@@ -45,3 +45,37 @@ echo $variable_10;
 
 </body>
 </html>
+
+//ejercicio 4
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+for ($i = 1; $i <= 10; $i++) {
+    echo "9 x $i = " . (9 * $i) . "<br>";
+}
+?>
+
+
+</body>
+</html>
+
+//ejercicio 5
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$numero = 7;
+if ($numero % 2 == 0) {
+    echo "Soy un número par.";
+} else {
+    echo "Soy un número impar.";
+}
+?>
+
+</body>
+</html>
