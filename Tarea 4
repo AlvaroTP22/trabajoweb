@@ -1,0 +1,34 @@
+//formulario en si
+ <!DOCTYPE html>
+<?php
+if (isset($_POST['submit'])) {
+    $Nombre = $_POST['name'];
+    $Correo = $_POST['email'];
+    $Web = $_POST['website'];
+    $Comentario = $_POST['comment'];
+    $Genero = $_POST['gender'];
+    echo "Nombre: ".$Nombre."<br>";
+    echo "E-mail: ".$Correo."<br>";
+    echo "Web: ".$Web."<br>";
+    echo "Comentario: ".$Comentario."<br>";
+    echo "Género: ".$Genero."<br>";
+        
+    // esta seria la subida
+    
+    $archivo = $_FILES['file'];
+    $nombre_de_archivo = $archivo['name'];
+    $tipo_archivo = $archivo['type'];
+    $ruta_temporal = $archivo['tmp_name'];
+    $error = $archivo['error'];
+    $tamaño = $archivo['size'];
+    $ruta_de_destino = "subidas/".$nombre_de_archivo;
+
+    //comprobar y mover los archivos
+    if($error == UPLOAD_ERR_OK){
+        move_uploaded_file($ruta_temporal, $ruta_de_destino);
+        echo "Se ha subido el archivo correctamente";
+    } else {
+        echo "Ha habido un error al subir el archivo";
+    }    
+}
+?>
