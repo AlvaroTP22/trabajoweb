@@ -1,0 +1,76 @@
+//apartado 1 (array asociativo de clave descendente)
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+
+$idade = array("Shakira"=>"45", "Piqué"=>"34", "Chía"=>"23");
+
+krsort($idade);
+//print_r($idade);
+
+foreach($idade as $key=>$edad){
+	echo $key." = ".$edad."<br>";
+}
+    
+?> 
+
+</body>
+</html>
+
+//apartado 2 (array de valor ascendente) 
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+
+$idade = array("Shakira"=>"45", "Piqué"=>"34", "Chía"=>"23");
+
+asort($idade);
+//print_r($idade);
+
+foreach($idade as $key=>$edad){
+	echo $key." = ".$edad."<br>";
+}
+    
+?> 
+
+</body>
+</html>
+
+
+//apartado 3 (añadir valor)
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+
+$edad = array(14,15,21);
+$edad[]= 18;
+
+print_r ($edad);
+    
+?> 
+
+</body>
+</html>
+
+//apartado 4 (eliminar valor)
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+
+$edad = array(14,15,21);
+unset ($edad[0]);
+
+print_r ($edad);
+    
+?> 
+
+</body>
+</html>
