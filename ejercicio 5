@@ -1,0 +1,23 @@
+//parte php
+
+<?php
+  if(isset($_FILE['fichero'])) {
+    $file = $_FILES['fichero'];
+    $file_name = $file['name'];
+    $file_tmp = $file['tmp_name'];
+    move_uploaded_file($file_tmp,"subidas/".$file_name);
+  }
+?>
+
+//parte formulario
+
+<html>
+<h1> Imagenes </h1>
+  <form action="destiofichero.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="fichero">
+    <input type="submit" value="Subir">
+   </form>
+ </html>
+ 
+ //pregunt trampa
+ no se pueden usar el comando get con imagenes
