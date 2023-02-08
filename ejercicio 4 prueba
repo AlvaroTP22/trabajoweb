@@ -1,0 +1,26 @@
+//pagina de html
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Formulario</h1>
+<form action="destino.php" method="post">
+  Operando1 <input type="text" name="operando1"><br><br>
+  Operando2 <input type="text" name="operando2"><br><br>
+  <input type="submit" value="Sumar">
+</form>
+
+</body>
+</html>
+
+//parte php
+
+<?php
+
+$operacion1 = $_POST["operando1"];
+$operacion2 = $_POST["operando2"];
+$sumando = $operacion1 + $operacion2;
+echo $sumando." es la suma de los operandos ";
+
+?>
